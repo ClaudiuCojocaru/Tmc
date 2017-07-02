@@ -2,6 +2,7 @@
 <html ng-app="tmc">
     <head>
         <meta charset="utf-8">
+        <base href="/my-base">
         <title>
             Ai prea multe haine
         </title>
@@ -9,11 +10,29 @@
 
         <!-- Please include only node_modules scripts here -->
         <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
     </head>
     <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav nav-pills">
+                    <li><a ui-sref="home">Home</a></li>
+                    <li><a ui-sref="products">Products</a></li>
+                    <li><a ui-sref="contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
         <span>anypassions?<i class="fa fa-battery-quarter" aria-hidden="true"></i></span>
+        <div class="container">
+            <ui-router></ui-router>
+        </div>
     </body>
 </html>
 <!-- Only local scripts -->
 <script type="text/javascript" src="config/app.js"></script>
+<script type="text/javascript" src="config/router.js"></script>
